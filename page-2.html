@@ -1,0 +1,1487 @@
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professionnels</title>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        html,
+        body {
+            width: 1440px;
+            height: 3179px;
+            margin: 0;
+            padding: 0;
+            background: rgba(249, 248, 255, 1);
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            top: 0;
+            left: 0;
+            overflow-x: hidden;
+        }
+
+        .content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 1440px;
+            height: 3179px;
+            padding: 20px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 20px 40px;
+        }
+
+        .title {
+            font-size: 52px;
+            font-weight: 300;
+            line-height: 58px;
+            justify-content: center;
+            display: flex;
+            letter-spacing: -2px;
+            color: rgba(70, 70, 70, 1);
+            margin: 40px 0 20px;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            font-weight: 300;
+            line-height: 43px;
+            display: flex;
+            justify-content: center;
+            color: rgba(70, 70, 70, 1);
+            margin: 0 0 20px;
+        }
+
+        .subtitle span {
+            font-weight: 600;
+        }
+
+        .search-container {
+            position: relative;
+            left: 28%;
+            display: flex;
+            width: 643px;
+            border: 1px solid transparent;
+            border-image-source: linear-gradient(90.56deg, #3FA2F7 10.93%, #53E7C3 82.75%);
+            border-image-slice: 1;
+        }
+
+        .search-bar {
+            width: 643px;
+            height: 54px;
+            display: flex;
+            align-items: center;
+            border-radius: 14px;
+            border: 1px solid;
+            border-image-source: linear-gradient(90.56deg, #3FA2F7 10.93%, #53E7C3 82.75%);
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+        }
+
+        .search-bar input {
+            flex-grow: 1;
+            height: 100%;
+            border: none;
+            padding: 0 20px;
+            font-size: 18px;
+            color: rgba(196, 196, 196, 1);
+            border-radius: 14px;
+            font-family: Road Rage;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 16px;
+            text-align: left;
+        }
+
+        .search-bar button {
+            width: 54px;
+            height: 54px;
+            border: none;
+            background: none;
+            padding: 0;
+            margin-right: 10px;
+        }
+
+        .filter-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            margin: 20px 0;
+        }
+
+        .navbar {
+            display: flex;
+            gap: 10px;
+            position: relative;
+            left: 124px;
+        }
+
+        .navbar button {
+            padding: 10px 20px;
+            border-radius: 100px;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 17.45px;
+            border: none;
+            background: rgba(220, 220, 220, 0.2);
+            color: rgba(70, 70, 70, 1);
+        }
+
+        .navbar .selected {
+            background: rgba(63, 162, 247, 1);
+            color: rgba(255, 255, 255, 1);
+        }
+
+        .navbar .typo span {
+            font-family: DM Sans;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 17.45px;
+            text-align: left;
+            color: rgba(0, 0, 0, 1);
+            ;
+
+        }
+
+        .filter-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 20px;
+            border-radius: 100px;
+            background: rgba(220, 220, 220, 0.2);
+            gap: 10px;
+            margin-right: 65px;
+        }
+
+        .filter-button span {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 17.45px;
+            color: rgba(70, 70, 70, 1);
+        }
+
+        .filter-button img {
+            width: 24px;
+            height: 16px;
+        }
+
+        @media (max-width: 1440px) {
+            .search-bar {
+                width: 100%;
+                max-width: 643px;
+            }
+
+            .navbar {
+                flex-wrap: wrap;
+            }
+
+            .navbar button {
+                flex: 1 1 auto;
+            }
+        }
+
+        .card {
+            width: 1193px;
+            height: 315px;
+            padding: 20px;
+            border: 1px solid #e0e0e0;
+            border-radius: 14px;
+            background-color: rgba(250, 249, 255, 1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            margin-top: 600px;
+        }
+
+        .profile {
+            display: flex;
+            align-items: center;
+            width: calc(100% - 60px);
+        }
+
+        .profile img {
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            margin-right: 20px;
+        }
+
+        .info {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .info h2 {
+            display: flex;
+            align-items: center;
+            margin: 0;
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .info p {
+            margin: 4px 0;
+            font-size: 14px;
+            color: #757575;
+        }
+
+        .stars {
+            display: flex;
+            margin-left: 10px;
+        }
+
+        .stars span {
+            color: gold;
+            margin-right: 2px;
+        }
+
+        .additional-info {
+            display: flex;
+            align-items: center;
+            margin-top: 5px;
+        }
+
+        .additional-info p {
+            margin: 0;
+            font-size: 14px;
+            color: #757575;
+            margin-right: 10px;
+        }
+
+        .details {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+
+        .details p {
+            margin: 0;
+            font-size: 14px;
+            color: #757575;
+        }
+
+        .dropdown {
+            margin-top: -15px;
+            margin-right: 650px;
+            border: 1px solid #00c2cb;
+            border-radius: 4px;
+            color: #ffffff;
+            font-size: 14px;
+            cursor: pointer;
+            width: 268px;
+            height: 40px;
+            padding: 0px 16px;
+            background: linear-gradient(89.62deg, #3FA2F7 -5.37%, #53E7C3 106.37%);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background-color: rgba(250, 249, 255, 1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .dropdown-content div {
+            padding: 10px 16px;
+            cursor: pointer;
+            font-size: 14px;
+            color: #00c2cb;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .dropdown-content div:hover {
+            background-color: #e0e0e0;
+        }
+
+        .dropdown-content div:last-child {
+            border-bottom: none;
+        }
+
+        /* Flèches pour les dropdowns */
+        .dropdown-arrow {
+            margin-left: 0;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+        }
+
+        .dropdown-arrow--default {
+            color: rgba(249, 249, 249, 1);
+        }
+
+        .dropdown-arrow--date {
+            color: rgba(70, 70, 70, 1);
+        }
+
+        .time-slots {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .time-slot {
+            width: 118px;
+            height: 40px;
+            margin-right: 80px;
+            border-radius: 10px;
+            color: #00c2cb;
+            border: 1px solid rgba(63, 162, 247, 1);
+            text-align: center;
+            font-size: 14px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .time-slot.disabled {
+            background-color: #e0e0e0;
+            color: #757575;
+            cursor: not-allowed;
+        }
+
+        .date-dropdowns {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .date-dropdown {
+            width: 87px;
+            height: 30px;
+            border-radius: 10px;
+            background: rgba(250, 249, 255, 1);
+            box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+            font-family: 'Open Sans', sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            text-align: center;
+            color: rgba(70, 70, 70, 1);
+            cursor: pointer;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .date-dropdown span {
+            position: relative;
+            display: flex;
+
+        }
+
+        .ellipsis {
+            cursor: pointer;
+            font-size: 24px;
+            line-height: 24px;
+            padding: 0 8px;
+            color: #757575;
+            position: absolute;
+            top: 200px;
+            right: 130px;
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            width: 100%;
+            position: relative;
+        }
+
+        .logo img {
+            width: 233px;
+            height: 102px;
+        }
+
+        h4 {
+            font-family: Roboto;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+            text-align: left;
+            color: rgba(165, 165, 165, 1);
+            margin-top: -50px;
+            position: relative;
+            top: 110px;
+            left: 130px;
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            position: absolute;
+            right: 0;
+        }
+
+        .header-right p {
+            position: relative;
+            left: -185px;
+        }
+
+        .time-slots-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
+
+        }
+
+        .pr {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-top: 20px;
+            margin-left: 155px;
+            position: relative;
+        }
+
+        .pr p {
+            font-family: Roboto;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 16.41px;
+            text-align: left;
+            color: rgba(70, 70, 70, 1);
+            margin: 2px 0;
+            position: relative;
+        }
+
+        .pr .icon {
+            position: absolute;
+            width: 36px;
+            height: 36px;
+            border-radius: 12px;
+            background: rgba(246, 238, 255, 1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgb(87, 169, 240);
+            font-size: 5px;
+            /* Ajustez la taille des icônes */
+        }
+
+        .pr .icon.phone {
+            top: -8px;
+            /* Positionnez la première icône */
+            left: -40px;
+            color: rgb(87, 169, 240);
+            ;
+            /* Ajustez la position horizontale */
+        }
+
+        .pr .icon.location {
+            top: 36px;
+            /* Positionnez la deuxième icône en dessous de la première icône */
+            left: -40px;
+            /* Ajustez la position horizontale */
+        }
+
+        .separator {
+            height: 20px;
+            /* Hauteur de l'espacement */
+        }
+
+
+        .card {
+            position: absolute;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            top: 10px;
+            width: 1193px;
+            height: 315px;
+            top: 929px;
+            left: 123px;
+            gap: 0px;
+            opacity: 0px;
+
+        }
+
+        .profile {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            top: 10px;
+        }
+
+        .profile-picture {
+            position: relative;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        .profile-picture img {
+            width: 100%;
+            height: auto;
+        }
+
+        .badge {
+            position: absolute;
+            bottom: 47px;
+            left: 0;
+            background-color: #2dbb92;
+            color: #fff;
+            padding: 5px;
+            font-size: 12px;
+            border-radius: 0 0 0 10px;
+        }
+
+        .info {
+            margin-left: 20px;
+        }
+
+        .name {
+            font-family: Roboto;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 21.09px;
+            text-align: left;
+            color: rgba(32, 32, 32, 1);
+        }
+
+        .generaliste {
+            position: absolute;
+            top: 62px;
+            font-family: Roboto;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+            text-align: left;
+            color: rgba(165, 165, 165, 1);
+        }
+
+        .rating {
+            position: absolute;
+            color: #ffd700;
+            margin-top: 5px;
+            top: 21px;
+            right: 840px;
+        }
+
+        .contact {
+            position: absolute;
+            top: 102px;
+            left: 101px;
+            font-family: Roboto;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 16.41px;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            color: rgba(70, 70, 70, 1);
+            gap: 31px;
+        }
+
+        .phone,
+        .location {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+
+        .phone img,
+        .location img {
+            width: 16px;
+            height: 16px;
+            margin-right: 10px;
+        }
+
+        .appointment-type {
+            margin-left: 20px;
+        }
+
+        .appointment-type button {
+            width: 268px;
+            height: 40px;
+            background: linear-gradient(89.62deg, #3FA2F7 -5.37%, #53E7C3 106.37%);
+            color: #fff;
+            font-family: Montserrat;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 24px;
+            text-align: left;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            position: absolute;
+            top: 254px;
+            left: 96px;
+            cursor: pointer;
+        }
+
+        .appointment-type svg {
+            color: rgba(255, 255, 255, 1);
+            position: absolute;
+            top: 277px;
+            right: -84px;
+            transform: translateY(-50%);
+        }
+
+        .date-selection {
+            margin-top: 20px;
+        }
+
+        .date-selection p {
+            position: absolute;
+            font-size: 14px;
+            color: #555;
+            top: 20px;
+            right: 474px;
+            margin-bottom: 10px;
+        }
+
+        .dropdowns {
+            display: flex;
+            position: absolute;
+            left: 914px;
+            top: 30px;
+            gap: 36px;
+        }
+
+        .dropdown {
+            background: rgba(250, 249, 255, 1);
+            width: 87px;
+            height: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+            justify-content: center;
+            gap: 0px;
+            border-radius: 10px;
+            opacity: 0px;
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+            cursor: pointer;
+        }
+
+        .dropdown span {
+            position: relative;
+            margin-right: 5px;
+            font-family: Open Sans;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            text-align: center;
+            color: rgba(70, 70, 70, 1);
+        }
+
+        .time-selection {
+            position: absolute;
+            top: 68px;
+            left: 548px;
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 72px;
+
+        }
+
+        .time-selection button {
+            padding: 10px 20px;
+            cursor: pointer;
+            width: 118px;
+            height: 40px;
+            border-radius: 10px;
+            border: 1px solid rgba(63, 162, 247, 1);
+            font-family: Open Sans;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            text-align: center;
+            color: rgba(0, 0, 0, 1);
+        }
+
+        .time-selection button.selected {
+            background-color: #ddd;
+            color: #fff;
+        }
+
+        .vertical-dots {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 5px;
+            height: 80px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2px;
+        }
+
+        .vertical-dots div {
+            width: 6px;
+            height: 6px;
+            background-color: rgba(165, 165, 165, 1);
+            border-radius: 50%;
+        }
+
+        .footer {
+            position: absolute;
+            background: linear-gradient(104.8deg, #3FA2F7 -3.74%, #53E7C3 94.5%);
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 1440px;
+            height: 851px;
+            top: 2328px;
+            gap: 0px;
+            opacity: 0px;
+
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .footer-title {
+            width: 100%;
+            text-align: center;
+            opacity: 0.6;
+            font-family: 'Roboto';
+            font-size: 30px;
+            font-weight: 600;
+            line-height: 35.16px;
+            letter-spacing: 2.8px;
+            color: rgba(255, 255, 255, 1);
+        }
+
+        .footer p {
+            position: absolute;
+            top: 45px;
+            left: 50%;
+            margin-bottom: 20px;
+            font-family: Roboto;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 33px;
+            text-align: center;
+            opacity: 0.8;
+            text-decoration: rgba(255, 255, 255, 1);
+
+        }
+
+        .footer-nav {
+            position: absolute;
+            top: 508px;
+        }
+
+        .footer-nav a {
+            color: rgba(255, 255, 255, 1);
+            font-family: 'Roboto';
+            margin: 0 50px;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 23.44px;
+            text-align: left;
+
+        }
+
+        .footer-nav a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-button {
+            position: absolute;
+            width: 240px;
+            height: 37px;
+            top: 508px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(74, 222, 222, 1);
+            border-radius: 10px;
+            padding: 10px 20px;
+            color: #fff;
+            cursor: pointer;
+            margin-top: 80px;
+        }
+
+        .contact-button:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .footer-logo img {
+            position: absolute;
+            top: 693px;
+            right: 1282px;
+            max-width: 150px;
+            margin-bottom: 20px;
+        }
+
+        .footer-social {
+            position: absolute;
+            top: 693px;
+            left: -62px;
+            display: flex;
+            justify-content: flex-end;
+            width: 100%;
+        }
+
+        .footer-social a {
+            margin: 0 5px;
+            display: flex;
+            align-items: center;
+            ;
+        }
+
+        .footer-social img {
+            width: 30px;
+            height: 30px;
+        }
+
+        .footer-copy {
+            margin-top: 20px;
+            font-size: 0.9em;
+            text-align: center;
+        }
+
+        hr {
+            width: 1200px;
+
+        }
+
+        h2 {
+
+            position: absolute;
+            top: 170px;
+            font-family: 'Roboto', sans-serif;
+            font-size: 30px;
+            font-weight: 600;
+            line-height: 35.16px;
+            letter-spacing: 2.8px;
+            text-align: center;
+            opacity: 0.6;
+        }
+
+        .footer-copy {
+            position: absolute;
+            top: 508px;
+        }
+
+        .footer-content h1 {
+            position: absolute;
+            top: 279px;
+            font-weight: 400;
+            font-family: Roboto;
+            font-size: 18px;
+            line-height: 33px;
+            text-align: center;
+            opacity: 0.8;
+
+
+        }
+
+        .pagination {
+            position: absolute;
+            top: 2206px;
+            right: 40%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 340px;
+            height: 51px;
+            margin: 0 auto;
+            gap: 0;
+            border-width: 0;
+            opacity: 1;
+            gap: 18px;
+        }
+
+        .page-btn {
+            border: 1px solid rgba(194, 194, 194, 1);
+            border-radius: 14px;
+            width: 50px;
+            height: 50px;
+            background: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: rgba(63, 162, 247, 1);
+        }
+
+        .page-numbers-container {
+            width: 220px;
+            height: 51px;
+            border-radius: 14px;
+            display: flex;
+            border: 1px solid rgba(194, 194, 194, 1);
+            /* border-radius: 12px; */
+        }
+
+        .page-number {
+            background: none;
+            border: none;
+            /* Supprimer les bordures individuelles */
+            font-size: 18px;
+            color: #000;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        .page-number.active {
+            background: rgba(63, 162, 247, 1);
+            color: #fff;
+            border-radius: 12px;
+        }
+
+        .page-number:hover,
+        .page-btn:hover {
+            background: rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar .buttons .signup {
+            text-decoration: none;
+            background-color: #23BDEE;
+            color: white;
+            width: 135px;
+            height: 38px;
+            border-radius: 80px;
+        }
+
+        .navbar .buttons .login {
+            text-decoration: none;
+            color: #23BDEE;
+        }
+
+        .navbar .buttons {
+            position: absolute;
+            left: 973px;
+            top: -104px;
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar .buttons a {
+            padding: 10px 20px;
+            border-radius: 20px;
+            margin-left: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <div class="pagination">
+            <button class="page-btn">
+            </button>
+            <div class="page-numbers-container">
+                <button class="page-number active">1</button>
+                <button class="page-number">2</button>
+                <button class="page-number">3</button>
+                <button class="page-number">4</button>
+            </div>
+            <button class="page-btn"> > </button>
+        </div>
+        <footer class="footer">
+            <div class="footer-content">
+                <h2>UNE SANTÉ CONNECTÉE, DES SOINS SANS FRONTIÈRES</h2>
+                <h1>Explorez la téléconsultation dès maintenant</h1>
+                <nav class="footer-nav">
+                    <a href="#">Accueil</a>
+                    <a href="#">Services</a>
+                    <a href="#">Specialité</a>
+                    <a href="#">Professionels</a>
+                    <a href="#">Aide et FAQ</a>
+                </nav>
+                <button class="contact-button">Contactez-nous</button>
+                <div class="footer-logo">
+                    <img src="logopng 1.png" alt="MedCity">
+                </div>
+                <div class="footer-social">
+                    <a href="#"><img src="path-to-linkedin-icon.png" alt="LinkedIn"></a>
+                    <a href="#"><img src="path-to-facebook-icon.png" alt="Facebook"></a>
+                    <a href="#"><img src="path-to-instagram-icon.png" alt="Instagram"></a>
+                    <a href="#"><img src="path-to-youtube-icon.png" alt="YouTube"></a>
+                </div>
+                <div style="
+            position: absolute;
+            top: 732px;
+        ">
+                    <hr>
+                    <p class="footer-copy">© 2023 MedCityHub</p>
+
+                </div>
+
+            </div>
+        </footer>
+
+
+        <div class="cards" style="
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+">
+
+            <div class="card4" style="
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 1000px;
+    width: 1193px;
+    height: 315px;
+    top: 1181px;
+    left: 94px;
+    gap: 0px;
+    opacity: 0px;
+    width: 1193px;
+    height: 315px;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 14px;
+    background-color: rgba(250, 249, 255, 1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* display: flex; */
+    /* justify-content: space-between; */
+    /* align-items: flex-start; */
+    /* flex-wrap: wrap; */
+    margin-top: 600px;
+">
+                <div class="profile">
+                    <div class="profile-picture">
+                        <img src="https://cdn.animaapp.com/projects/6699df15f41f069ab57cc5ef/releases/669a5ee1dfcabfc110d21a6b/img/mask-group-1@2x.png"
+                            alt="Profile Picture">
+                        <div class="badge">Dr</div>
+                    </div>
+                    <div class="info">
+                        <div class="name">Yassin ben foulen</div>
+                        <div class="generaliste">Generaliste</div>
+                        <div class="rating">★★★★★</div>
+                    </div>
+                </div>
+                <div class="vertical-dots">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="contact">
+                    <div class="phone">
+                        <img src="https://cdn.animaapp.com/projects/6699df15f41f069ab57cc5ef/releases/66a3b38ac8236f0e9a22c70b/img/phone-1.svg"
+                            alt="Phone Icon">
+                        <span>+216 23456789</span>
+                    </div>
+                    <div class="location">
+                        <img src="https://cdn.animaapp.com/projects/6699df15f41f069ab57cc5ef/releases/669a5ee1dfcabfc110d21a6b/img/---icon--location-@2x.png"
+                            alt="Location Icon">
+                        <span>Sfax Sakite ezzit</span>
+                    </div>
+                </div>
+                <div class="date-selection">
+                    <p>Aujourd’hui le 14 Avril 2023</p>
+                    <div class="dropdowns">
+                        <div class="dropdown">
+                            <span>Mois</span>
+                            <img src="https://cdn.animaapp.com/projects/6699df15f41f069ab57cc5ef/releases/66a3b38ac8236f0e9a22c70b/img/feather-icons-chevron-down-2.svg"
+                                alt="Dropdown Icon">
+                        </div>
+                        <div class="dropdown">
+                            <span>jour</span>
+                            <img src="https://cdn.animaapp.com/projects/6699df15f41f069ab57cc5ef/releases/66a3b38ac8236f0e9a22c70b/img/feather-icons-chevron-down-2.svg"
+                                alt="Dropdown Icon">
+                        </div>
+                    </div>
+                </div>
+                <div class="time-selection">
+                    <button>9:30</button>
+                    <button>11:00</button>
+                    <button class="selected">15:10</button>
+                    <button>13:20</button>
+                    <button class="selected">15:10</button>
+                    <button>16:00</button>
+                </div>
+                <div class="appointment-type">
+                    <button>Type de Rendez-vous</button>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-chevron-down" style="
+    left: 326px;
+">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                        <!-- Code injected by live-server -->
+
+                    </svg>
+                </div>
+            </div>
+
+
+            <div class="card3" style="
+    position: absolute;
+    /* display: flex; */
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    /* width: 1193px; */
+    /* height: 315px; */
+    top: -146px;
+    /* left: 123px; */
+    gap: 0px;
+    opacity: 0px;
+    width: 1193px;
+    height: 315px;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 14px;
+    background-color: rgba(250, 249, 255, 1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* display: flex; */
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-top: 600px;
+">
+                <div class="profile">
+                    <div class="profile-picture">
+                        <img src="https://cdn.animaapp.com/projects/6699df15f41f069ab57cc5ef/releases/669a5ee1dfcabfc110d21a6b/img/mask-group-1@2x.png"
+                            alt="Profile Picture">
+                        <div class="badge">Dr</div>
+                    </div>
+                    <div class="info">
+                        <div class="name">Yassin ben foulen</div>
+                        <div class="generaliste">Generaliste</div>
+                        <div class="rating">★★★★★</div>
+                    </div>
+                </div>
+                <div class="vertical-dots">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="contact">
+                    <div class="phone">
+                        <img src="https://cdn.animaapp.com/projects/6699df15f41f069ab57cc5ef/releases/66a3b38ac8236f0e9a22c70b/img/phone-1.svg"
+                            alt="Phone Icon">
+                        <span>+216 23456789</span>
+                    </div>
+                    <div class="location">
+                        <img src="https://cdn.animaapp.com/projects/6699df15f41f069ab57cc5ef/releases/669a5ee1dfcabfc110d21a6b/img/---icon--location-@2x.png"
+                            alt="Location Icon">
+                        <span>Sfax Sakite ezzit</span>
+                    </div>
+                </div>
+                <div class="date-selection">
+                    <p>Aujourd’hui le 14 Avril 2023</p>
+                    <div class="dropdowns">
+                        <div class="dropdown">
+                            <span>Mois</span>
+                            <img src="https://cdn.animaapp.com/projects/6699df15f41f069ab57cc5ef/releases/66a3b38ac8236f0e9a22c70b/img/feather-icons-chevron-down-2.svg"
+                                alt="Dropdown Icon">
+                        </div>
+                        <div class="dropdown">
+                            <span>jour</span>
+                            <img src="https://cdn.animaapp.com/projects/6699df15f41f069ab57cc5ef/releases/66a3b38ac8236f0e9a22c70b/img/feather-icons-chevron-down-2.svg"
+                                alt="Dropdown Icon">
+                        </div>
+                    </div>
+                </div>
+                <div class="time-selection">
+                    <button>9:30</button>
+                    <button>11:00</button>
+                    <button class="selected">15:10</button>
+                    <button>13:20</button>
+                    <button class="selected">15:10</button>
+                    <button>16:00</button>
+                </div>
+                <div class="appointment-type">
+                    <button>Type de Rendez-vous</button>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-chevron-down" style="
+    left: 326px;
+">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                        <!-- Code injected by live-server -->
+
+                    </svg>
+                </div>
+            </div>
+            <div class="card1" style="
+    position: absolute;
+    /* display: flex; */
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    /* top: 10px; */
+    /* width: 1193px; */
+    /* height: 315px; */
+    top: 712px;
+    left: 99px;
+    gap: 0px;
+    opacity: 0px;
+    width: 1193px;
+    height: 315px;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 14px;
+    background-color: rgba(250, 249, 255, 1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* display: flex; */
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-top: 600px;
+">
+                <div class="profile">
+                    <div class="profile-picture">
+                        <img src="https://cdn.animaapp.com/projects/6699df15f41f069ab57cc5ef/releases/669a5ee1dfcabfc110d21a6b/img/mask-group-1@2x.png"
+                            alt="Profile Picture">
+                        <div class="badge">Dr</div>
+                    </div>
+                    <div class="info">
+                        <div class="name">Yassin ben foulen</div>
+                        <div class="generaliste">Generaliste</div>
+                        <div class="rating">★★★★★</div>
+                    </div>
+                </div>
+                <div class="vertical-dots">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="contact">
+                    <div class="phone">
+                        <img src="https://cdn.animaapp.com/projects/6699df15f41f069ab57cc5ef/releases/66a3b38ac8236f0e9a22c70b/img/phone-1.svg"
+                            alt="Phone Icon">
+                        <span>+216 23456789</span>
+                    </div>
+                    <div class="location">
+                        <img src="https://cdn.animaapp.com/projects/6699df15f41f069ab57cc5ef/releases/669a5ee1dfcabfc110d21a6b/img/---icon--location-@2x.png"
+                            alt="Location Icon">
+                        <span>Sfax Sakite ezzit</span>
+                    </div>
+                </div>
+                <div class="date-selection">
+                    <p>Aujourd’hui le 14 Avril 2023</p>
+                    <div class="dropdowns">
+                        <div class="dropdown">
+                            <span>Mois</span>
+                            <img src="https://cdn.animaapp.com/projects/6699df15f41f069ab57cc5ef/releases/66a3b38ac8236f0e9a22c70b/img/feather-icons-chevron-down-2.svg"
+                                alt="Dropdown Icon">
+                        </div>
+                        <div class="dropdown">
+                            <span>jour</span>
+                            <img src="https://cdn.animaapp.com/projects/6699df15f41f069ab57cc5ef/releases/66a3b38ac8236f0e9a22c70b/img/feather-icons-chevron-down-2.svg"
+                                alt="Dropdown Icon">
+                        </div>
+                    </div>
+                </div>
+                <div class="time-selection">
+                    <button>9:30</button>
+                    <button>11:00</button>
+                    <button class="selected">15:10</button>
+                    <button>13:20</button>
+                    <button class="selected">15:10</button>
+                    <button>16:00</button>
+                </div>
+                <div class="appointment-type">
+                    <button>Type de Rendez-vous</button>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-chevron-down" style="
+    left: 326px;
+">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                        <!-- Code injected by live-server -->
+                    </svg>
+                </div>
+            </div>
+            <div class="card2" style="
+    position: absolute;
+    /* display: flex; */
+    justify-content: space-between;
+    align-items: center;
+    top: 1000px;
+    width: 1193px;
+    height: 315px;
+    top: 270px;
+    left: 101px;
+    gap: 0px;
+    opacity: 0px;
+    width: 1193px;
+    height: 315px;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 14px;
+    background-color: rgba(250, 249, 255, 1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* display: flex; */
+    /* justify-content: space-between; */
+    /* align-items: flex-start; */
+    /* flex-wrap: wrap; */
+    margin-top: 600px;
+">
+                <div class="profile">
+                    <div class="profile-picture">
+                        <img src="https://cdn.animaapp.com/projects/6699df15f41f069ab57cc5ef/releases/669a5ee1dfcabfc110d21a6b/img/mask-group-1@2x.png"
+                            alt="Profile Picture">
+                        <div class="badge">Dr</div>
+                    </div>
+                    <div class="info">
+                        <div class="name">Yassin ben foulen</div>
+                        <div class="generaliste">Generaliste</div>
+                        <div class="rating">★★★★★</div>
+                    </div>
+                </div>
+                <div class="vertical-dots">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="contact">
+                    <div class="phone">
+                        <img src="https://cdn.animaapp.com/projects/6699df15f41f069ab57cc5ef/releases/66a3b38ac8236f0e9a22c70b/img/phone-1.svg"
+                            alt="Phone Icon">
+                        <span>+216 23456789</span>
+                    </div>
+                    <div class="location">
+                        <img src="https://cdn.animaapp.com/projects/6699df15f41f069ab57cc5ef/releases/669a5ee1dfcabfc110d21a6b/img/---icon--location-@2x.png"
+                            alt="Location Icon">
+                        <span>Sfax Sakite ezzit</span>
+                    </div>
+                </div>
+                <div class="date-selection">
+                    <p>Aujourd’hui le 14 Avril 2023</p>
+                    <div class="dropdowns">
+                        <div class="dropdown">
+                            <span>Mois</span>
+                            <img src="https://cdn.animaapp.com/projects/6699df15f41f069ab57cc5ef/releases/66a3b38ac8236f0e9a22c70b/img/feather-icons-chevron-down-2.svg"
+                                alt="Dropdown Icon">
+                        </div>
+                        <div class="dropdown">
+                            <span>jour</span>
+                            <img src="https://cdn.animaapp.com/projects/6699df15f41f069ab57cc5ef/releases/66a3b38ac8236f0e9a22c70b/img/feather-icons-chevron-down-2.svg"
+                                alt="Dropdown Icon">
+                        </div>
+                    </div>
+                </div>
+                <div class="time-selection">
+                    <button>9:30</button>
+                    <button>11:00</button>
+                    <button class="selected">15:10</button>
+                    <button>13:20</button>
+                    <button class="selected">15:10</button>
+                    <button>16:00</button>
+                </div>
+                <div class="appointment-type">
+                    <button>Type de Rendez-vous</button>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-chevron-down" style="
+    left: 326px;
+">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                        <!-- Code injected by live-server -->
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+
+        <header class="header">
+            <div class="logo">
+                <a href="ind.html">
+                    <img src="logopng 1.png" alt="MedCity Hub">
+                </a>
+            </div>
+        </header>
+
+        <nav class="navbar">
+            <div class="buttons"> <a href="#" class="login">Connexion</a>
+                <a href="#" class="signup">S'inscrire</a>
+            </div>
+
+        </nav>
+        </header>
+        <div class="container">
+            <h1 class="title">Professionnels</h1>
+            <p class="subtitle">Liste de recherches pour <span>Généraliste</span></p>
+            <div class="search-container">
+                <div class="search-bar">
+                    <input type="text" placeholder="Chercher">
+                    <button class="search-button" id="myButton"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                            height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(63, 162, 247, 1)" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" class="feather feather-search">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg></button>
+                </div>
+            </div>
+            <div class="filter-container">
+                <div class="navbar">
+                    <button><span>Toutes les catégories</span></button>
+                    <button class="selected"><span>Généraliste</span></button>
+                    <div class="typo">
+                        <button><span>Psychologue</span></button>
+                        <button><span>Dermatologue</span></button>
+                        <button><span>Cardiologue</span></button>
+                        <button><span>Infirmier</span></button>
+                        <button><span>Pharmacien</span></button>
+                    </div>
+                </div>
+                <div class="filter-button">
+                    <span>Filtrer</span>
+                    <img src="filter-icon.png" alt="Filter Icon">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        console.log('Feather Icons loaded:', typeof feather !== 'undefined');
+        feather.replace()
+    </script>
+</body>
+
+</html>
